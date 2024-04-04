@@ -1,0 +1,103 @@
+TYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/NV2.png" alt="logo">
+                </a>
+            </div>
+            <button id="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="apropos.html" class="nav-link">À propos</a>
+                <a href="gallerie.html" class="nav-link">Galerie</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+        </header>
+        
+        
+        
+        
+        <br>
+        <br>
+
+        <aside>
+            <h2>Nom de l'evenement</h2>
+        
+            <p>Cliquer sur l'image pour l'agrandir</p>
+            <br>
+            <br>
+            
+            
+        </aside>
+
+        <div class="gallery">
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 1">
+            </div>
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 2">
+            </div>
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 3">
+            </div>
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 4">
+            </div>
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 5">
+            </div>
+            <div class="image" onclick="openImage(this)">
+                <img src="https://img1.pictaero.com/2010/02/23/s/74322.jpg" alt="Un cessna partie 6">
+            </div>
+        </div>
+        <div id="overlay" onclick="closeImage()">
+            <div id="overlay-content">
+                <span onclick="closeImage()" class="close">&times;</span>
+                <img id="enlarged-image" src="" alt="">
+                <p id="image-description"></p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+       <aside>
+        <a href="gallerie.html" class="button2">Retour en arrière</a>
+       </aside>
+        
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <h3>
+            <p>&copy; 2024 Nathan Vergeade. Tous droits réservés.</p>
+            </h3>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

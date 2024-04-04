@@ -1,0 +1,600 @@
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color : #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+.top-bar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Pour s'assurer que la barre est au-dessus du contenu */
+    border-bottom: 1px solid white; 
+    animation: slideIn 1s ease forwards; /* Utilise l'animation slideIn avec une durée de 1 seconde */
+
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+#close-button {
+    color: white;
+    cursor: pointer;
+    font-size: 19px; /* Ajustez la taille de la croix selon vos besoins */
+    margin-right: 20px; /* Ajustement de la position vers la gauche */
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1; /* La section de contenu occupe tout l'espace disponible */
+    padding: 20px;
+    
+}
+
+
+header, nav, .main-content, aside, footer {
+    padding: 10px;
+}
+header h1 {
+    margin-left: 20px; /* Ajoute une marge à droite du titre */
+    cursor: pointer;
+}
+header nav{
+    margin-right: 35px; /* Ajoute une marge à droite du titre */
+}
+header {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments sur les côtés opposés */
+    align-items: center; /* Centre les éléments verticalement */
+    position: fixed;
+    width:100%;
+    top: 0; /* Positionne la barre au sommet */
+    left: 0;
+    z-index: 1000; /* Assure que la barre est au-dessus du contenu */
+    padding: 12px;
+}
+.logo img {
+    width: 225px; /* Largeur souhaitée pour votre logo */
+    height: 40px;
+    margin-left:15px ;
+    cursor: pointer;
+}
+h1 {
+    max-width: 200px; /* Définir la largeur maximale du titre */
+    margin: 0; /* Supprime la marge par défaut du titre */
+    font-size: 23px;
+}
+h3 {
+    font-family: Arial, sans-serif;
+    color : #fff;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 14px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+aside {
+    background-color: #030202;
+    color : #fff;
+    text-align: center;
+    
+}
+
+footer {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Position relative pour permettre le positionnement de la superposition */
+    display: inline-block; /* Permet à l'élément de s'adapter à la taille de l'image */
+}
+
+.image-container img {
+    display: block;
+    width: 100vw; /* Largeur de la fenêtre du navigateur */
+    height: auto;
+    
+}
+
+
+
+.image-container::before,
+.image-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15%;
+}
+
+.image-container::before {
+    top: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.7)); /* Dégradé linéaire transparent vers le haut */
+}
+
+.image-container::after {
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)); /* Dégradé linéaire transparent vers le bas */
+}
+
+
+.image-container .transparent-box {
+    position: absolute;
+    
+    color: #f4f4f4; /* Couleur du texte */
+    font-size: 26px;
+    padding: 80px; /* Espace intérieur autour du titre */
+    width: 250px; /* Largeur égale à la largeur de la fenêtre du navigateur moins les marges */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur */
+    background-color: rgba(0, 0, 0, 0.3); /* Couleur de fond semi-transparente */
+
+}
+.transparent-box {
+    position: absolute; /* Position absolue pour le carré transparent */
+    top: 50%; /* Alignement vertical au centre */
+    left: 50%; /* Alignement horizontal au centre */
+    transform: translate(-50%, -50%); /* Ajuste le positionnement au centre */
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond transparente */
+    border: 2px solid #ffffff; /* Bordure solide */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 20px; /* Espacement interne */
+    
+    
+}
+
+.transparent-box h2 {
+    margin-top: 0; /* Supprimer la marge supérieure par défaut */
+}
+
+.transparent-box p {
+    margin-bottom: 10px; /* Espacement sous le sous-titre */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s; /* Animation de transition */
+}
+
+.nav-link:hover {
+    color: #c72c2c; /* Couleur différente lorsqu'on survole */
+}
+
+.custom-button {
+    background-color: #000000; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: 2px solid #ffffff; /* Bordure solide */
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animation de transition */
+}
+
+.custom-button:hover {
+    background-color:rgba(0, 0, 0, 0); /* Couleur de fond différente lorsqu'on survole */
+    color : #000000;
+    border-color : #000000/* Couleur de la bordure différente lorsqu'on survole */
+}
+
+
+
+.image-container button {
+    position: absolute;
+    top: 120px; /* Ajustez cette valeur pour positionner le titre verticalement */
+    left: 150px; /* Ajustez cette valeur pour positionner le titre horizontalement */
+    color: #ffffff; /* Couleur du texte */
+    font-size: 15px;
+    padding: 10px; /* Espace intérieur autour du titre */
+    width: 40; /* Largeur égale à la largeur de la fenêtre du navigateur moins les marges */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur */
+}
+
+.two-columns-section {
+    display: flex; /* Utilisation de flexbox pour créer deux colonnes côte à côte */
+}
+
+.column {
+    flex: 1; /* Chaque colonne prend la moitié de l'espace disponible */
+    padding: 20px; /* Espacement interne des colonnes */
+    text-align: center; /* Centrage du contenu */
+    color: #fff;
+    background-color: #000000;
+    transition: transform 0.3s;
+}
+.column :hover {
+    transform: scale(0.95);
+}
+
+/* Média query pour ajuster le nombre de colonnes à partir d'une certaine largeur */
+@media screen and (max-width: 480px) {
+    .column {
+        flex: 1 1 100%; /* Chaque colonne occupe 100% de la largeur à partir d'une colonne */
+        max-width: 100%; /* Limite la largeur à 100% */
+    }
+}
+
+
+
+
+.column img {
+    width: 100%; /* L'image occupe toute la largeur de la colonne */
+    max-width: 100%; /* L'image ne dépasse pas la largeur de la colonne */
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer;
+}
+
+.column h2 {
+    margin-top: 0; /* Supprimer la marge supérieure par défaut du titre */
+}
+
+.column p {
+    margin-bottom: 10px; /* Espacement sous le paragraphe */
+}
+.button2 {
+    background-color: #000000; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: 2px solid #ffffff;
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s, color 0.3s; /* Animation de transition */
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.button2:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond différente lorsqu'on survole */
+}
+
+.image-section {
+    display: flex; /* Utilisation de flexbox pour aligner les rangées horizontalement */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin-top: 20px; /* Espacement supplémentaire au-dessus de la section */
+    
+}
+
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}
+
+.row img {
+    width: 300px; /* Taille des images */
+    height: 300px; /* Taille des images */
+    margin: 5px; /* Espacement entre les images */
+    border-radius: 20px; /* Bords arrondis */
+    transition: transform 0.3s;
+    max-width: 100%;
+    
+    
+}
+
+.row :hover {
+    transform: scale(0.95);
+}
+
+/* Média query pour ajuster le nombre de colonnes à partir d'une certaine largeur */
+@media screen and (max-width: 1200px) {
+    .row {
+        flex: 1 1 33.33%; /* Chaque colonne occupe 33.33% de la largeur à partir de 3 colonnes */
+        max-width: 33.33%; /* Limite la largeur à 33.33% */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex: 1 1 50%; /* Chaque colonne occupe 50% de la largeur à partir de 2 colonnes */
+        max-width: 50%; /* Limite la largeur à 50% */
+    }
+    
+    /* Pour le cas où l'écran est très petit, une seule colonne */
+    @media screen and (max-width: 480px) {
+        .row {
+            flex: 1 1 100%; /* Chaque colonne occupe 100% de la largeur à partir d'une colonne */
+            max-width: 100%; /* Limite la largeur à 100% */
+        }
+    }
+}
+
+.contact-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-section a {
+    display: inline-block;
+    background-color: #000000; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: 2px solid #ffffff;
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s, color 0.3s; /* Animation de transition */
+}
+
+
+.contact-section a:hover {
+    
+    background-color:rgba(255, 255, 255, 0.5); /* Couleur de fond différente lorsqu'on survole */
+    color : #ffffff;
+    border-color : #ffffff/* Couleur de la bordure différente lorsqu'on survole */
+    
+}
+
+
+/* Styles pour le bouton de navigation */
+#nav-toggle {
+    display: none; /* Caché par défaut sur les grands écrans */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: transform 0.5s ease;
+    margin-right: 20px;
+}
+
+
+/* Styles spécifiques pour les petits écrans */
+@media screen and (max-width: 768px) {
+    #nav-toggle {
+        display: block; /* Afficher le bouton sur les petits écrans */
+    }
+
+    nav {
+        display: none; /* Cacher la navigation par défaut sur les petits écrans */
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex; /* Afficher la navigation lorsque le menu est ouvert */
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+
+    #nav-toggle:hover span {
+        background-color: #c72c2c;
+
+    }
+
+    #nav-toggle span:nth-child(2) {
+        margin: 0; 
+    }
+
+    #nav-toggle span:nth-child(3) {
+        margin-top: 5px;
+    }
+    
+}
+
+
+
+
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.image {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.menu-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.menu-item p {
+    margin-top: 5px;
+}
+
+
+
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff
+}
+
+#enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.presentation-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet le passage à la ligne des éléments lorsque l'espace est insuffisant */
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 20px; /* Ajoute un espace en bas de la partie gauche */
+    
+}
+.left-section h2 {
+    color:#fff
+
+    
+}
+.left-section p {
+    color:#fff
+
+    
+}
+
+.right-section {
+    flex: 1;
+}
+
+.right-section img {
+    display: block; /* Assure que les images s'affichent en bloc, une en dessous de l'autre */
+    width: 100%; /* Les images occupent toute la largeur de leur conteneur */
+    margin-bottom: 20px; /* Ajoute un espace entre les images */
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures des cellules */
+}
+
+table, th, td {
+    border: 1px solid black; /* Ajoute une bordure à chaque cellule et en-tête */
+}
+
+td {
+    padding: 8px;
+}
+
+tr {
+    background-color: white; /* Définit la couleur de fond des lignes du tableau */
+}
+
+
