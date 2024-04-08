@@ -293,6 +293,25 @@ footer {
     background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond différente lorsqu'on survole */
 }
 
+.button3 {
+    background-color: #000000; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: 2px solid #ffffff;
+    border-radius: 20px; /* Bords arrondis */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s, color 0.3s; /* Animation de transition */
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.button3:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond différente lorsqu'on survole */
+}
+
 .image-section {
     display: flex; /* Utilisation de flexbox pour aligner les rangées horizontalement */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
@@ -598,3 +617,58 @@ tr {
 }
 
 
+
+.liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.colonne {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px); /* Pour avoir 3 colonnes sur les écrans larges */
+    max-width: calc(33.33% - 20px);
+    border: 2px solid white;
+    padding: 10px;
+    display: flex; /* Utilise la disposition flex pour aligner verticalement le contenu */
+    flex-direction: column;
+    border-radius: 20px;
+    
+    
+}
+
+
+.colonne img {
+    max-width: 100%;
+    border-radius: 20px;
+    
+}
+
+h2 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+p {
+    margin-bottom: 0px;
+    color: white;
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .colonne {
+        flex-basis: calc(50% - 20px); /* Pour avoir 2 colonnes sur les écrans moyens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Media query pour les écrans encore plus petits */
+@media screen and (max-width: 480px) {
+    .colonne {
+        flex-basis: 100%; /* Pour avoir 1 colonne sur les petits écrans */
+        max-width: 100%;
+    }
+}
