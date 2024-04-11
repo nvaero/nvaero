@@ -430,10 +430,7 @@ footer {
     #nav-toggle {
         display: block; /* Afficher le bouton sur les petits écrans */
     }
-    #nav-toggle span:hover,
-    #nav-toggle span:focus,
-    #nav-toggle span:active {
-    background-color: #c72c2c; /* Changement de couleur au survol */
+    
 }
 
     #nav-toggle span:active {
