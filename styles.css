@@ -434,7 +434,7 @@ footer {
 }
 
     #nav-toggle span:active {
-    background-color: #ffffff; /* Restaurer la couleur par défaut lorsque le bouton est cliqué */
+    background-color: transparent; /* Restaurer la couleur par défaut lorsque le bouton est cliqué */
 }
 
     nav {
