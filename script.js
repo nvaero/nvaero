@@ -47,6 +47,7 @@ closeButton.addEventListener('click', () => {
 
 
 
+
 function calculate2() {
     var consommation = parseFloat(document.getElementById('consommation').value);
     var tempsRoulage = parseFloat(document.getElementById('tempsRoulage').value);

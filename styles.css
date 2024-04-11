@@ -408,6 +408,10 @@ footer {
     border: none;
     cursor: pointer;
     padding: 10px;
+    position: fixed;
+    top: 10px; /* Position fixe en haut de l'écran */
+    right: 10px; /* Position fixe à droite de l'écran */
+    z-index: 999; 
 }
 
 #nav-toggle span {
@@ -428,8 +432,18 @@ footer {
     }
 
     nav {
-        display: none; /* Cacher la navigation par défaut sur les petits écrans */
+        position: fixed;
+        top: 0;
+        left: 0; /* Position horizontale au milieu de l'écran */
+        width:100%;
+        
+        background-color: #000000; /* Couleur de fond du menu */
+        display: none;
+        align-items: center; /* Centrer les éléments horizontalement */
+        padding: 10px;
         flex-direction: column;
+        animation: slideIn 0.5s ease;
+        
     }
 
     nav.open {
@@ -438,6 +452,7 @@ footer {
 
     nav a {
         margin: 10px 0;
+        font-size: 18px;
     }
 
 
@@ -453,6 +468,15 @@ footer {
     #nav-toggle span:nth-child(3) {
         margin-top: 5px;
     }
+    @keyframes slideIn {
+        from {
+            top: -100%; /* Commence au-dessus de l'écran */
+        }
+        to {
+            top: 0; /* Se déplace vers le bas pour s'aligner avec le haut de l'écran */
+        }
+    }
+    
     
 }
 
