@@ -435,8 +435,6 @@ footer {
     #nav-toggle span:hover,
     #nav-toggle span:focus,
     #nav-toggle span:active {
-    background-color: #ffffff; /* Changement de couleur au survol */
-    #nav-toggle span:active {
     background-color: transparent; /* Restaurer la couleur par défaut lorsque le bouton est cliqué */
     }
 
