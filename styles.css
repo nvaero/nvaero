@@ -465,10 +465,7 @@ footer {
     }
 
 
-    #nav-toggle:hover span {
-        background-color: #c72c2c;
-
-    }
+    
 
     #nav-toggle span:nth-child(2) {
         margin: 0; 
